@@ -1,11 +1,16 @@
 import React from "react";
 import DrawingBoard from "./components/DrawingBoard";
+import styled from "styled-components";
+
+const AppWrapper = styled.div`
+  padding: 20px;
+`;
 
 function App() {
   return (
-    <div>
+    <AppWrapper>
       <DrawingBoard />
-    </div>
+    </AppWrapper>
   );
 }
 

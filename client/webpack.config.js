@@ -10,14 +10,14 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
   },
-  devServer: {
-    contentBase: path.resolve(__dirname, "dist"),
-    compress: true,
-    port: 9000,
-    hot: true
-  },
   module: {
-    rules: [{ test: /\.js$/, exclude: "/node_modules/", use: "babel-loader" }]
+    rules: [
+      { test: /\.js$/, exclude: "/node_modules/", use: "babel-loader" },
+      {
+        test: /\.css$/,
+        use: [{ loader: "style-loader" }, { loader: "css-loader" }]
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({

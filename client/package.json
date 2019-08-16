@@ -5,15 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "dev": "webpack-dev-server --open"
+    "build": "webpack --progress --colors",
+    "dev": "webpack-dev-server --devtool eval-source-map --progress --colors --hot --inline --content-base ./dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "css-loader": "^3.2.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "reset-css": "^4.0.1",
+    "style-loader": "^1.0.0",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
